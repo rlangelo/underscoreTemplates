@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+    <HEAD>
+        <TITLE>
+            WPI Fictional Character Generator
+        </TITLE>
+    </HEAD>
+    <BODY style="text-align:center;background-color:#232B2B">
+        <H1 style="color:#DC3D24">WPI Fictional Character Generator</H1>
+	<span><a style="color:#DC3D24">Character Name:</a>
+		<input type="text" id="charName"/>
+		<input type="button" value="Submit" id="subButton"/></span>	
+        <p style="color:#DC3D24">Character Type: </p><a id="type" style="color:#DC3D24"></a>
+            <nav>
+              <input type="button" value="Student" id="studButton"/>
+              <input type="button" value="Staff" id="staffBut"/>
+            </nav>
+	<input type="button" value="Cancel" id="Cancel"/>
+	<br/>
+	<br/>
+	<div id="outer" style="margin:0 auto;background-color:#6D3228;width:400px;visibility:hidden">Get Department 
+		<div id="middle" style="background-color:#923526">Get Age
+			<div id="inner" style="background-color:#DC3D24">Get Hobby</div>
+		</div>
+	</div>
+	<div id="outer2" style="margin:0 auto;background-color:#6D3228;width:400px;visibility:hidden">Get Department
+		<div id="middle2" style="background-color:#923526">Get Age
+			<div id="inner2" style="background-color:#DC3D24">Get Hobby</div>
+		</div>
+	</div>
+	<br />
+	<span id="cName" style="visibility:hidden;color:#DC3D24"> Character Name: <a id="name" style="color:#DC3D24"></a></span>
+	<br />
+	<br />
+	<br />
+	<span id="dept" style="visibility:hidden;color:#DC3D24"> <a>Department: </a><a id="randDept" style="color:#DC3D24"></a></span>
+	<br />
+	<br />
+	<br />
+	<span id="age" style="visibility:hidden;color:#DC3D24"><a>Age: </a><a id="randAge" style="color:#DC3D24"></a><a> Years Old</a></span>
+	<br />
+	<br />
+	<br />
+	<span id="hobby" style="visibility:hidden;color:#DC3D24"><a>Hobby: </a><a id="randHobby" style="color:#DC3D24"></a></span>
+	<script src="script.js"></script>
+    </BODY>
+</HTML>
