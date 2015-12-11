@@ -11,10 +11,25 @@ h2, h3, a, p {
   color:#DC3D24;
 }
 
+.namePost {
+  background: #232B2B;
+  border-radius: 10px;
+  border-top: 1px solid #DC3D24;
+  border-left: 1px solid #DC3D24;
+  border-right: 1px solid #DC3D24;
+}
+
 .post {
   background: #232B2B;
   border-radius: 10px;
-  border-bottom: 1px solid #999;
+  border-left: 1px solid #DC3D24;
+  border-right: 1px solid #DC3D24;
+}
+
+.legPost {
+  background: #232B2B;
+  border-radius: 10px;
+  border-bottom: 1px solid #DC3D24;
 }
 
 .value {
@@ -32,6 +47,14 @@ h2, h3, a, p {
   width:550px;
   height:550px;
   border:1px solid #000;
+  margin:10px;
+  text-align:center;
+}
+
+.list {
+  float:left;
+  width:550px;
+  height:550px;
   margin:10px;
   text-align:center;
 }

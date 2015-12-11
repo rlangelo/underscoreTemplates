@@ -48,34 +48,46 @@
       <h3>Torso</h3>
       <p>Pick 4 attributes for <a id="torsoName"></a></p>
       <form id="torso">
+        <div id="torso1">
       <input type="radio" id="broad" name="width" value="Thick" class="radio"><a>Broad Shoulders</a><br />
       <input type="radio" id="narrow" name="width" value="Lean" class="radio"><a>Narrow Shoulders</a>
+    </div>
       <br />
       <br />
+      <div id="torso2">
       <input type="radio" id="muscular" name="strength" value="Muscular" class="radio"><a>Muscular</a><br />
       <input type="radio" id="fat" name="strength" value="Fat" class="radio"><a>Fat</a><br />
       <input type="radio" id="skinny" name="strength" value="Skinny" class="radio"><a>Skinny</a><br />
+    </div>
       <br />
       <br />
+      <div id="torso3">
       <input type="radio" id="longarms" name="length" value="Long Arms" class="radio"><a>Long Arms</a><br />
       <input type="radio" id="shortarms" name="length" value="Short Arms" class="radio"><a>Short Arms</a>
+    </div>
       <br />
       <br />
+      <div id="torso4">
       <input type="radio" id="hairy" name="hairyness" value="Hairy" class="radio"><a>Hairy</a><br />
       <input type="radio" id="bare" name="hairyness" value="Bare" class="radio"><a>Bare</a>
+    </div>
     </form>
     </div>
     <div class="subsection">
       <h3>Legs</h3>
       <p>Pick 2 attributes for <a id="legsName"></a></p>
       <form id="legs">
+        <div id="legs1">
         <input type="radio" id="longlegs" name="length" value="Long Legs" class="radio"><a>Long Legs</a><br />
         <input type="radio" id="shortlegs" name="length" value="Short Legs" class="radio"><a>Short Legs</a>
+      </div>
         <br />
         <br />
-        <input type="radio" id="stronglegs" name="thickness" value="Blonde Hair" class="radio"><a>Strong Legs</a><br />
-        <input type="radio" id="skinnylegs" name="thickness" value="Brown Hair" class="radio"><a>Skinny Legs</a><br />
-        <input type="radio" id="fatlegs" name="thickness" value="Red Hair" class="radio"><a>Fat Legs</a><br />
+        <div id="legs2">
+        <input type="radio" id="stronglegs" name="thickness" value="Strong Legs" class="radio"><a>Strong Legs</a><br />
+        <input type="radio" id="skinnylegs" name="thickness" value="Skinny Legs" class="radio"><a>Skinny Legs</a><br />
+        <input type="radio" id="fatlegs" name="thickness" value="Fat Legs" class="radio"><a>Fat Legs</a><br />
+      </div>
       </form>
     </div>
     <br />
@@ -83,7 +95,7 @@
     <input type="button" value="Generate" id="generateButton">
     <input type="button" value="Start Over" id="restart">
   </div>
-	<div class="section" id="list">
+	<div class="list" id="list">
 	</div>
 </div>
 <script src="script.js"></script>
