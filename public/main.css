@@ -11,6 +11,12 @@ h2, h3, a, p {
   color:#DC3D24;
 }
 
+.post {
+  background: #232B2B;
+  border-radius: 10px;
+  border-bottom: 1px solid #999;
+}
+
 .value {
   color:#DC3D24;
 }

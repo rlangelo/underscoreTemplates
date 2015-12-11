@@ -15,7 +15,15 @@ document.getElementById("generateButton").addEventListener("click", generateChar
 document.getElementById("restart").addEventListener("click", startOver);
 
 var name = "";
+var gender = "";
 var nameSubmitted = 0;
+
+var characters = [
+	{
+		name: "Rafael",
+		gender: "Male"
+	},
+];
 
 function startOver() {
 	document.getElementById("headName").innerText = "";
@@ -62,7 +70,15 @@ function submitName() {
 function generateCharacter() {
 	var complete = checkFormComplete();
 	if (complete == 1) {
-
+		if (document.getElementById("male").checked) {
+			gender = "Male";
+			characters.push("{name: " + name + ", \ngender: " + gender + "},\n");
+		}
+		else {
+			gender = "Female";
+			characters.push("{name: " + name + ", \ngender: " + gender + "},\n");
+		}
+		refreshList();
 	}
 	else {
 		alert("Please fill all fields before generating")
@@ -134,7 +150,24 @@ function colorChange3() {
 	document.getElementById("restart").style.background = 'lightgreen';
 }
 
-function getRandomInt(min, max) {
-	var number = Math.floor(Math.random() * (max - min + 1)) + min;
-	return number;
+var compiled = _.template(
+	"<div class='post'>" +
+	  "<p><%= name %></p>" +
+	  "<p><%= gender %></p>" +
+	"</div>"
+);
+
+var str = "";
+characters.forEach( function(p, i) {
+	str += compiled(p);
+})
+
+document.getElementById("list").innerHTML += str;
+
+function refreshList() {
+	characters.forEach( function(p, i) {
+		str = compiled(p);
+	})
+
+	document.getElementById("list").innerHTML += str;
 }
