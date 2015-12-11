@@ -7,35 +7,7 @@ body {
   background-color: #232B2B;
 }
 
-h2 {
-  color:#DC3D24;
-}
-
-a {
-  color:#DC3D24;
-}
-
-p {
-  color:#DC3D24;
-}
-
-.outer {
-  background-color:#6D3228;
-  width:400px;
-  visibility:hidden;
-  margin: 0 auto;
-}
-
-.middle {
-  background-color:#923526;
-}
-
-.inner {
-  background-color:#DC3D24;
-}
-
-.attributes {
-  visibility:hidden;
+h2, h3, a, p {
   color:#DC3D24;
 }
 
@@ -68,4 +40,7 @@ p {
 
 .clear {
   clear:both;
+}
+
+.radio {
 }

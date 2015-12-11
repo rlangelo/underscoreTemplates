@@ -13,26 +13,69 @@
 	<div class="section">
     <h2>Create Character</h2>
     <a>Character Name: </a>
-    <input type="text" id="charName"/>
+    <input type="text" id="charName" maxlength="12"/>
     <input type="button" value="Submit" id="submitButton"/>
     <br />
     <br />
-    <input type="radio" name="sex" value="Male"><a>Male</a>
-    <input type="radio" name="sex" value="Female"><a>Female</a>
+    <input type="radio" name="sex" id="male" value="Male"><a>Male</a>
+    <input type="radio" name="sex" id="female" value="Female"><a>Female</a>
+    <br />
+    <br />
+    <div class="subsection">
+      <h3>Head</h3>
+      <p>Pick 3 attributes for <a id="headName"></a></p>
+      <form id="head">
+        <input type="radio" id="long" name="length" value="Long Hair" class="radio"><a> Long Hair</a><br />
+        <input type="radio" id="short" name="length" value="Short Hair" class="radio"><a>Short Hair </a>
+        <br />
+        <br />
+        <input type="radio" id="blonde" name="color" value="Blonde Hair" class="radio"><a>Blonde Hair</a><br />
+        <input type="radio" id="brown" name="color" value="Brown Hair" class="radio"><a>Brown Hair</a><br />
+        <input type="radio" id="red" name="color" value="Red Hair" class="radio"><a>Red Hair</a><br />
+        <br />
+        <br />
+        <input type="radio" id="square" name="jaw" value="Square Jaw" class="radio"><a>Square Jaw</a><br />
+        <input type="radio" id="soft" name="jaw" value="Soft Jaw" class="radio"><a>Soft Jaw</a>
+      </form>
+    </div>
+    <div class="subsection">
+      <h3>Torso</h3>
+      <p>Pick 4 attributes for <a id="torsoName"></a></p>
+      <form id="torso">
+      <input type="radio" id="broad" name="width" value="Thick" class="radio"><a>Broad Shoulders</a><br />
+      <input type="radio" id="narrow" name="width" value="Lean" class="radio"><a>Narrow Shoulders</a>
+      <br />
+      <br />
+      <input type="radio" id="muscular" name="strength" value="Muscular" class="radio"><a>Muscular</a><br />
+      <input type="radio" id="fat" name="strength" value="Fat" class="radio"><a>Fat</a><br />
+      <input type="radio" id="skinny" name="strength" value="Skinny" class="radio"><a>Skinny</a><br />
+      <br />
+      <br />
+      <input type="radio" id="longarms" name="length" value="Long Arms" class="radio"><a>Long Arms</a><br />
+      <input type="radio" id="shortarms" name="length" value="Short Arms" class="radio"><a>Short Arms</a>
+      <br />
+      <br />
+      <input type="radio" id="hairy" name="hairyness" value="Hairy" class="radio"><a>Hairy</a><br />
+      <input type="radio" id="bare" name="hairyness" value="Bare" class="radio"><a>Bare</a>
+    </form>
+    </div>
+    <div class="subsection">
+      <h3>Legs</h3>
+      <p>Pick 2 attributes for <a id="legsName"></a></p>
+      <form id="legs">
+        <input type="radio" id="longlegs" name="length" value="Long Legs" class="radio"><a>Long Legs</a><br />
+        <input type="radio" id="shortlegs" name="length" value="Short Legs" class="radio"><a>Short Legs</a>
+        <br />
+        <br />
+        <input type="radio" id="stronglegs" name="thickness" value="Blonde Hair" class="radio"><a>Strong Legs</a><br />
+        <input type="radio" id="skinnylegs" name="thickness" value="Brown Hair" class="radio"><a>Skinny Legs</a><br />
+        <input type="radio" id="fatlegs" name="thickness" value="Red Hair" class="radio"><a>Fat Legs</a><br />
+      </form>
+    </div>
     <br />
     <br />
     <input type="button" value="Generate" id="generateButton">
-    <br />
-    <br />
-    <div class="subsection">
-      <p>Head</p>
-    </div>
-    <div class="subsection">
-      <p>Torso</p>
-    </div>
-    <div class="subsection">
-      <p>Legs</p>
-    </div>
+    <input type="button" value="Start Over" id="restart">
   </div>
 	<div class="section">
 	</div>
