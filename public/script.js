@@ -18,10 +18,31 @@ var name = "";
 var gender = "";
 var nameSubmitted = 0;
 
+var hattr1 = "";
+var hattr2 = "";
+var hattr3 = "";
+
+var tattr1 = "";
+var tattr2 = "";
+var tattr3 = "";
+var tattr4 = "";
+
+var lattr1 = "";
+var lattr2 = "";
+
 var characters = [
 	{
 		name: "Rafael",
-		gender: "Male"
+		gender: "Male",
+		hattr1: "a",
+		hattr2: "b",
+		hattr3: "c",
+		tattr1: "d",
+		tattr2: "e",
+		tattr3: "f",
+		tattr4: "g",
+		lattr1: "h",
+		lattr2: "k",
 	},
 ];
 
@@ -70,13 +91,16 @@ function submitName() {
 function generateCharacter() {
 	var complete = checkFormComplete();
 	if (complete == 1) {
+		assignHeadAttr();
 		if (document.getElementById("male").checked) {
 			gender = "Male";
-			characters.push("{name: " + name + ", \ngender: " + gender + "},\n");
+			characters.push("{name: " + name + ", \ngender: " + gender + ", \nhattr1: " + hattr1 + ", \nhattr2: " + hattr2 +
+												", \nhattr3: " + hattr3 + " },\n");
 		}
 		else {
 			gender = "Female";
-			characters.push("{name: " + name + ", \ngender: " + gender + "},\n");
+			characters.push("{name: " + name + ", \ngender: " + gender + ", \nhattr1: " + hattr1 + ", \nhattr2: " + hattr2 +
+												", \nhattr3: " + hattr3 + " },\n");
 		}
 		refreshList();
 	}
@@ -85,8 +109,36 @@ function generateCharacter() {
 	}
 }
 
+function assignHeadAttr() {
+	var val;
+	var radios1 = document.getElementById("head1").getElementsByTagName('input');
+	for (var i=0; i<radios1.length; i++) {
+		if (radios1[i].type == 'radio') {
+			if (radios1[i].checked) {
+				hattr1 = radios1[i].value;
+			}
+		}
+	}
+	var radios2 = document.getElementById("head2").getElementsByTagName('input');
+	for (var i=0; i<radios2.length; i++) {
+		if (radios2[i].type == 'radio') {
+			if (radios2[i].checked) {
+				hattr2 = radios2[i].value;
+			}
+		}
+	}
+	var radios3 = document.getElementById("head3").getElementsByTagName('input');
+	for (var i=0; i<radios3.length; i++) {
+		if (radios3[i].type == 'radio') {
+			if (radios3[i].checked) {
+				hattr3 = radios3[i].value;
+			}
+		}
+	}
+}
+
 function checkFormComplete() {
-	var c = document.getElementById("head").getElementsByTagName('input');
+  var c = document.getElementById("head").getElementsByTagName('input');
 	var head = 0;
 	for (var i = 0; i < c.length; i++) {
 		if (c[i].type == 'radio') {
@@ -152,22 +204,44 @@ function colorChange3() {
 
 var compiled = _.template(
 	"<div class='post'>" +
-	  "<p><%= name %></p>" +
-	  "<p><%= gender %></p>" +
+	  "<a><%= name %></a>" +
+		"<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp&nbsp</a>" +
+	  "<a><%= gender %></a>" +
+	"</div>"
+);
+
+var headCompiled = _.template(
+	"<div class='post'>" +
+	"<p><%= hattr1 %></p>" +
+	"<a><%= hattr2 %></a>" +
+	"<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp</a>" +
+	"<a><%= hattr3 %></a>" +
+	"</div>"
+);
+
+var torsoCompiled = _.template(
+	"<div class='post'>" +
+	"<p><a><%= tattr1 %></a><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp</a><a><%= tattr2 %></a></p>" +
+	"<p><a><%= tattr3 %></a><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp</a><a><%= tattr4 %></a></p>" +
+	"</div>"
+);
+
+var legsCompiled = _.template(
+	"<div class='post'>" +
+	"<a><%= lattr1 %></a>" +
+	"<a><%= lattr2 %></a>" +
 	"</div>"
 );
 
 var str = "";
-characters.forEach( function(p, i) {
-	str += compiled(p);
-})
-
-document.getElementById("list").innerHTML += str;
+var strHead = "";
 
 function refreshList() {
 	characters.forEach( function(p, i) {
 		str = compiled(p);
+		strHead = headCompiled(p);
 	})
 
 	document.getElementById("list").innerHTML += str;
+	document.getElementById("list").innerHTML += strHead;
 }
