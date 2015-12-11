@@ -1,0 +1,71 @@
+h1 {
+  color:#DC3D24;
+  text-align:center;
+}
+
+body {
+  background-color: #232B2B;
+}
+
+h2 {
+  color:#DC3D24;
+}
+
+a {
+  color:#DC3D24;
+}
+
+p {
+  color:#DC3D24;
+}
+
+.outer {
+  background-color:#6D3228;
+  width:400px;
+  visibility:hidden;
+  margin: 0 auto;
+}
+
+.middle {
+  background-color:#923526;
+}
+
+.inner {
+  background-color:#DC3D24;
+}
+
+.attributes {
+  visibility:hidden;
+  color:#DC3D24;
+}
+
+.value {
+  color:#DC3D24;
+}
+
+#container {
+  width:1200px;
+  margin:0 auto;
+  border:1px solid #000;
+}
+
+.section {
+  float:left;
+  width:550px;
+  height:550px;
+  border:1px solid #000;
+  margin:10px;
+  text-align:center;
+}
+
+.subsection {
+  float:left;
+  width: 170px;
+  height:350px;
+  border:1px solid #000;
+  margin:5px;
+}
+
+.clear {
+  clear:both;
+}
